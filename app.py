@@ -38,9 +38,25 @@ def login():
 def user_dashboard():
     return "Welcome to user dashboard"
 
-@app.route('/admin')
+# Route for the admin dashboard
+# Route for the admin dashboard
+@app.route('/admin', methods=['GET', 'POST'])
 def admin_dashboard():
-    return "Welcome to admin dashboard"
+    # Function to insert event data into the database
+    def insert_event(title, description, date):
+        conn = sqlite3.connect('users.db')
+        c = conn.cursor()
+        c.execute("INSERT INTO events (title, description, date) VALUES (?, ?, ?)", (title, description, date))
+        conn.commit()
+        conn.close()
+
+    if request.method == 'POST':
+        title = request.form['title']
+        description = request.form['description']
+        date = request.form['date']
+        insert_event(title, description, date)
+        return redirect(url_for('admin_dashboard'))
+    return render_template('admin_dashboard.html')
 
 @app.route('/sponsor')
 def sponsor_dashboard():
