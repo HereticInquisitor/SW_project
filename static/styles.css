@@ -95,3 +95,159 @@ button:hover {
     background-color: #0056b3;
 }
 
+.btn-create-event {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.btn-create-event:hover {
+    background-color: #0056b3;
+}
+
+
+
+/* Styles for user dashboard */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff; /* Text color */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align items at the top */
+    min-height: 100vh; /* Ensure full height */
+    margin: 0; /* Remove default margin */
+}
+
+.container {
+    max-width: 800px;
+    margin-top: 200px; /* Adjust top margin as needed */
+    padding: 20px;
+    background-color: #333; /* Container background color */
+    border-radius: 5px; 
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    text-align: center; /* Align heading to the center */
+    color: #fff;
+}
+
+.btn-register {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-register:hover {
+    background-color: #0056b3;
+}
+    
+/* Styles for user dashboard */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff; /* Text color */
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align items at the top */
+    min-height: 100vh; /* Ensure full height */
+    margin: 0; /* Remove default margin */
+}
+
+.container {
+    max-width: 800px;
+    margin-top: 500px; /* Adjust top margin as needed */
+    padding: 20px;
+    background-color: #333; /* Container background color */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+h1 {
+    text-align: center; /* Align heading to the center */
+    color: #fff;
+    margin-top: 20px; /* Adjust top margin for the title */
+}
+
+.btn-register {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    text-align: center;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-register:hover {
+    background-color: #0056b3;
+}
+
+/* Styles for registration form */
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #333; /* Form background color */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+form h2 {
+    text-align: center;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fff; /* Label text color */
+}
+
+form input[type="text"],
+form input[type="email"],
+form input[type="password"],
+form input[type="number"],
+form input[type="tel"], /* Added */
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    background-color: #444; /* Input background color */
+    color: #fff; /* Input text color */
+}
+
+form button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0056b3;
+}

@@ -36,7 +36,25 @@ def login():
 # Routes for different dashboards
 @app.route('/user')
 def user_dashboard():
-    return "Welcome to user dashboard"
+    return render_template('user_dashboard.html')
+
+# Route for user registration page
+@app.route('/register', methods=['GET', 'POST'])
+def register():
+    if request.method == 'POST':
+        # Get form data
+        username = request.form['username']
+        email = request.form['email']
+        password = request.form['password']
+        # Process the form data here (e.g., save to database)
+        # Redirect to user dashboard after registration
+        return redirect(url_for('user_dashboard'))
+    return render_template('user_form.html')
+
+@app.route('/book-tickets')
+def book_tickets():
+    # You can add any necessary logic here
+    return render_template('book_tickets.html')
 
 # Route for the admin dashboard
 # Route for the admin dashboard

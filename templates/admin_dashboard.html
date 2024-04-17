@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,69 @@
         <div class="event-creation">
             <h3>Create Event</h3>
             <form action="/admin" method="post">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" name="title" placeholder="Enter event title" required>
+                </div>
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" name="description" placeholder="Enter event description"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date" name="date" required>
+                </div>
+                <button type="submit">Create Event</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Welcome to Admin Dashboard</h2>
+        <div class="event-creation">
+            <a href="/create_event" class="btn-create-event">Create Event</a>
+        </div>
+    </div>
+</body>
+</html> -->
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.btn-create-event').click(function() {
+                $('.event-creation').toggle();
+            });
+        });
+    </script>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Welcome to Admin Dashboard</h2>
+        <a href="#" class="btn-create-event">Create Event</a>
+        <div class="event-creation" style="display: none;">
+            <form action="/create_event" method="post">
                 <div class="form-group">
                     <label for="title">Title</label>
                     <input type="text" id="title" name="title" placeholder="Enter event title" required>
