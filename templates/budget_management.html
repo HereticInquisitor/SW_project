@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Management</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="budget-management-container">
+        <h2>Budget Management</h2>
+        <div class="total-budget">
+            <h3>Total Budget</h3>
+            <p>{{ total_budget }}</p>
+        </div>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <div class="flash-messages">
+                    {% for message in messages %}
+                        <div class="flash-message">{{ message }}</div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+        <div class="budget-distribution">
+            <h3>Distribute Budget</h3>
+            <form action="/budget_management" method="post">
+                <div class="form-group">
+                    <label for="marketing">Marketing Budget:</label>
+                    <input type="number" id="marketing" name="marketing" required>
+                </div>
+                <div class="form-group">
+                    <label for="operations">Operations Budget:</label>
+                    <input type="number" id="operations" name="operations" required>
+                </div>
+                <div class="form-group">
+                    <label for="technology">Technology Budget:</label>
+                    <input type="number" id="technology" name="technology" required>
+                </div>
+                <div class="form-group">
+                    <label for="miscellaneous">Miscellaneous Budget:</label>
+                    <input type="number" id="miscellaneous" name="miscellaneous" required>
+                </div>
+                <button type="submit">Distribute Budget</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

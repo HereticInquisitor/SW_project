@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Venue Selection</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212; /* Dark background color */
+            color: #fff; /* Light text color */
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #333; /* Dark container background color */
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            color: #fff; /* Light heading text color */
+        }
+        .venue-list {
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            background-color: #444; /* Dark list item background color */
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        li:hover {
+            background-color: #555; /* Dark hover color */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Venue Selection</h2>
+        <div class="venue-list">
+            <h3>List of Venues</h3>
+            <ul>
+                {% for venue in venues %}
+                    <li>{{ venue[0] }} - Availability: {{ venue[1] }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -251,3 +251,121 @@ form button[type="submit"] {
 form button[type="submit"]:hover {
     background-color: #0056b3;
 }
+
+
+
+
+/* Styles for the budget management button */
+.btn-budget {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue color */
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-budget:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+
+
+/* Styles for the sponsor management button */
+.btn-sponsor {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Red color */
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-sponsor:hover {
+    background-color: #0056b3; /* Darker red color on hover */
+}
+
+
+
+/* Styles for the venue selection button */
+.btn-venue {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff; /* Blue color */
+    color: #fff; /* White text color */
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-venue:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+
+
+
+
+
+/* Add CSS styles for form elements */
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.btn-submit {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background-color: #0056b3;
+}
+
+
+
+
+/* Styles for the logout button */
+.btn-logout {
+    position: absolute;
+    top: 20px; /* Adjust the top position */
+    left: 20px; /* Adjust the left position */
+    padding: 10px 20px;
+    background-color: #dc3545; /* Red color */
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-logout:hover {
+    background-color: #c82333; /* Darker red color on hover */
+}
+
+/* Other button styles */
+.buttons {
+    margin-top: 50px; /* Adjust spacing between buttons and logout button */
+}

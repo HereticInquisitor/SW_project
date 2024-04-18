@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sponsor Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        /* CSS styles for the sponsor list */
+        .sponsor-list {
+            margin-top: 20px;
+        }
+
+        .sponsor-list ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .sponsor-list li {
+            background-color: #f4f4f4;
+            padding: 10px;
+            margin-bottom: 5px;
+            border-radius: 5px;
+            color: black; /* Set text color to black */
+        }
+
+        .sponsor-list li:hover {
+            background-color: #e0e0e0;
+        }
+    </style>
+</head>
+<body>
+    <div class="sponsor-dashboard-container">
+        <h2>Sponsor Dashboard</h2>
+        <div class="sponsor-list">
+            <h3>List of Sponsors</h3>
+            <ul>
+                {% for sponsor in sponsors %}
+                    <li>{{ sponsor[0] }} - Contribution: ${{ sponsor[1] }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

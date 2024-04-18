@@ -1,44 +1,26 @@
-<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Dashboard</title>
-    <!-- Add any necessary CSS styles or links to external CSS files -->
+    <title>Sponsor Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
 </head>
 <body>
-    <h1>Welcome to the User Dashboard</h1>
-    <!-- <a href="/register"><button>Register</button></a> -->
-</body>
-</html>
-
-<!DOCTYPE html>
-<html lang="en">
-<!-- <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Dashboard</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
-</head> -->
-
-<body>
-    <div class="container">
-        <h1>User Registration</h1>
-        <div class="buttons">
-            <a href="/register" class="btn-register">Register</a>
-        </div>
-                    </div>
-</body>
-
-<body>
-    <div class="container">
-        <h1>Ticket Booking</h1>
-        <div class="buttons">
-            <a href="/book-tickets" class="btn-register">Book Tickets</a>
-        </div>
-                    </div>
+    <div class="sponsor-registration-container">
+        <h2>Sponsor Registration</h2>
+        <form action="/sponsor_registration" method="post">
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter sponsor's name" required>
+            </div>
+            <div class="form-group">
+                <label for="amount">Sponsored Amount</label>
+                <input type="number" id="amount" name="amount" placeholder="Enter sponsored amount" required>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </body>
 </html>
 

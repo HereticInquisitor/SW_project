@@ -1,31 +1,11 @@
-<!-- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
+
 <body>
-    <div class="dashboard-container">
-        <h2>Welcome to Admin Dashboard</h2>
-        <div class="event-creation">
-            <h3>Create Event</h3>
-            <form action="/admin" method="post">
-                <div class="form-group">
-                    <label for="title">Title</label>
-                    <input type="text" id="title" name="title" placeholder="Enter event title" required>
-                </div>
-                <div class="form-group">
-                    <label for="description">Description</label>
-                    <textarea id="description" name="description" placeholder="Enter event description"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="date">Date</label>
-                    <input type="date" id="date" name="date" required>
-                </div>
-                <button type="submit">Create Event</button>
-            </form>
+    <div class="container">
+        <h2>Event Creation</h2>
+        <div class="buttons">
+            <a href="/create_event_page" class="btn-create-event">Create Event</a> <!-- Redirects to the create event page -->
         </div>
     </div>
 </body>
@@ -34,62 +14,94 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-</head>
+
 <body>
-    <div class="dashboard-container">
-        <h2>Welcome to Admin Dashboard</h2>
-        <div class="event-creation">
-            <a href="/create_event" class="btn-create-event">Create Event</a>
+    <div class="container">
+        <h2>Existing Events</h2>
+        <div class="buttons">
+            <a href="/event_list" class="btn-create-event">Event list</a> <!-- Redirects to the create event page -->
         </div>
     </div>
 </body>
-</html> -->
-
+</html>
 
 
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            $('.btn-create-event').click(function() {
-                $('.event-creation').toggle();
-            });
-        });
-    </script>
-</head>
+
 <body>
-    <div class="dashboard-container">
-        <h2>Welcome to Admin Dashboard</h2>
-        <a href="#" class="btn-create-event">Create Event</a>
-        <div class="event-creation" style="display: none;">
-            <form action="/create_event" method="post">
-                <div class="form-group">
-                    <label for="title">Title</label>
-                    <input type="text" id="title" name="title" placeholder="Enter event title" required>
-                </div>
-                <div class="form-group">
-                    <label for="description">Description</label>
-                    <textarea id="description" name="description" placeholder="Enter event description"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="date">Date</label>
-                    <input type="date" id="date" name="date" required>
-                </div>
-                <button type="submit">Create Event</button>
-            </form>
+    <div class="container">
+        <h1>Budget Dashboard</h1>
+        <div class="buttons">
+            <a href="/budget_management" class="btn-budget">Manage Budget</a>
         </div>
     </div>
 </body>
 </html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="container">
+        <h1>Sponsor Dashboard</h1>
+        <div class="buttons">
+            <a href="/sponsor_dashboard" class="btn-sponsor">Sponsor Management</a>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="container">
+        <h1>Venue Selection</h1>
+        <div class="buttons">
+            <!-- <a href="/budget-management" class="btn-budget">Manage Budget</a>
+            <a href="/sponsor-management" class="btn-sponsor">Sponsor Management</a> -->
+            <a href="/venue_selection" class="btn-venue">Venue Selection</a>
+        </div>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+    <div class="container">
+        <h2>Event Deletion</h2>
+        <div class="buttons">
+            <a href="/delete_event" class="btn-create-event">Delete Event</a> 
+        </div>
+    </div>
+</body>
+</html>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+    <!-- <title>Admin Dashboard</title> -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- <h1>Admin Dashboard</h1> -->
+        <div class="buttons">
+        <a href="/logout" class="btn-logout">Logout</a> <!-- Move the logout button here -->
+        <div>
+   
+    </div>
+</body>
+</html>
+
+

@@ -9,13 +9,13 @@
 <body>
     <div class="container">
         <h1>Book Tickets</h1>
-        <form action="/confirm-booking" method="post">
+        <form action="/confirm_booking" method="post">
             <div class="form-group">
                 <label for="event-list">Select Event:</label>
                 <select id="event-list" name="event">
-                    <option value="event1">Event 1</option>
-                    <option value="event2">Event 2</option>
-                    <!-- Add options dynamically from database -->
+                    {% for event in events %}
+                    <option value="{{ event[0] }}">{{ event[1] }}</option>
+                    {% endfor %}
                 </select>
             </div>
             <div class="form-group">
